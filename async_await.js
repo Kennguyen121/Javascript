@@ -1,9 +1,10 @@
 
-async function myDisplay() {
-    let myPromise = new Promise(function(resolve) {
-      setTimeout(function() {resolve("I love You !!");}, 3000);
-    });
-    console.log(await myPromise);
+async function myFunc() {
+  // Wait 1 second
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  // Print "Hello World!" to the console
+  console.log("Hello World!");
 }
-  
-myDisplay();
+
+myFunc();
